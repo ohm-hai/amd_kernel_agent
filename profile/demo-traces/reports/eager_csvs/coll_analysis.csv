@@ -1,0 +1,2 @@
+rank,Process Group Name,Process Group Ranks,Collective name,Group size,dtype,In msg nelems,Out msg nelems,In split size,Out split size,stream,In msg size (MB)_first,Out msg size (MB)_first,dur_sum,dur_mean,dur_std,dur_min,dur_max,operation_count
+0,3,"[0, 1, 2, 3, 4, 5, 6, 7]",_allgather_base,8,BFloat16,25136,201088,[],[],7,0.047943115234375,0.383544921875,21.953,21.953,,21.953,21.953,1
