@@ -1,0 +1,3 @@
+name,total_direct_kernel_time_sum,total_subtree_kernel_time_sum,total_direct_kernel_time_ms,total_subtree_kernel_time_ms,Count,Categories,Percentage (%),Cumulative Percentage (%)
+hipModuleLaunchKernel,530.06396484375,530.06396484375,0.53006396484375,0.53006396484375,20,['other'],94.53043737604848,94.53043737604848
+aten::fill_,30.669677734375,30.669677734375,0.030669677734375,0.030669677734375,10,['elementwise'],5.469562623951515,100.0

@@ -1,0 +1,42 @@
+# Task pack — Kimi K3 KDA layer decode on MI355X (reference pack for KAF).
+# Source of truth for the physics: ../../kda-serving/contract.md
+[task]
+name = "kda-serving"
+objective = "2x FLA Triton on KDA decode (Kimi K3 layer, H=96, K=V=128) on MI355X, measured on FLA's serving path; geomean over B in {1,8,32,128} >= 2.0 and no batch size slower than FLA"
+language = "flydsl"
+reference = "FLA fused_recurrent_kda_fwd serving path (ssm_state_indices + inplace_final_state=True)"
+
+[target]
+metric = "graphed_us_per_step"
+aggregation = "geomean"
+baseline = "baseline-fla-decode"
+grid = [1, 8, 32, 128]
+goal = 2.0
+per_point_min_ratio = 1.0
+
+[constraints]
+gpus = "free-only"
+no_docker = true
+no_downloads = true
+notes = [
+    "fp32 state: B=128 roofline floor (203us) is above 2x of FLA (~146us); target requires reduced-precision state",
+    "fp16 state passes the bar (worst state rRMSE 2.0e-3); bf16 fails (1.6e-2 on drift)",
+]
+
+[promotion]
+rules = [
+    "frozen verifier passes all gates at the declared state dtype",
+    "native serving interface: in-place indexed state pool, no gather/scatter wrapper",
+    "graphed per-step latency faster than current best on the serving path with per-B breakdown recorded",
+    "geomean speedup over the grid >= 2.0 and every B >= 1.0x baseline",
+]
+
+[paths]
+task_dir = "../../../kda-serving"
+verifier = "verifier/verify_decode.py"
+bench = "bench/serving_decode.py"
+bar = "bar.toml"
+cases = "cases"
+results = "results.csv"
+candidates = "candidates.jsonl"
+verifier_deps = ["inputs.py", "../tools/env_stamp.py", "../kda-attn/ref_fp64.py"]

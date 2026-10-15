@@ -1,0 +1,14 @@
+{
+  "candidate": "runs/baseline-fla",
+  "geomean_speedup": 1.0158,
+  "rows": [
+    {
+      "workload": "H64_fixed_8192",
+      "H": 64,
+      "tokens": 8192,
+      "baseline_ms": 1.983,
+      "candidate_ms": 1.952,
+      "speedup": 1.0158
+    }
+  ]
+}

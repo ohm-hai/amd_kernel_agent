@@ -1,0 +1,8 @@
+id = "D3_adversarial_ranges"
+class = "adversarial"
+generator = "verify_decode.run_gates_stress"
+params = { deep_decay_bits_per_64 = 600, v_scale = 32, near_unity_max = 1e-3, seeds = [21, 22] }
+tolerance_ref = "o_max_abs"
+kills = "clamping, skipped work, and range hacks that survive tame inputs"
+incident = "synthetic -|N(0,1)| gates reach p99 91 bits of decay per 64 tokens while real Kimi gates reach ~600; the KDA2-blog reward hacks (clamped gates, early-exit decay) pass tame tests and fail exactly these ranges"
+gates = ["D3_deep_decay", "D3_near_unity_gates", "D3_large_v_x32"]

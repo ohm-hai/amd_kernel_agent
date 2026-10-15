@@ -1,0 +1,9 @@
+{
+  "mode": "holdout",
+  "candidate": "/root/amd-workspace/kernel-lab/kda-serving/runs/flydsl-decode-v11",
+  "passed": true,
+  "n_gates": 10,
+  "n_failed": 0,
+  "n_holdout_seeds": 4,
+  "seconds": 2.8
+}

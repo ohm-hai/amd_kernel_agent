@@ -1,0 +1,66 @@
+{
+  "env": {
+    "time": "2026-10-15T20:17:36",
+    "host": "ohm-mi355x-25dd40c1-head",
+    "physical_gpu": 4,
+    "gpu_occupancy_at_start": {
+      "vram_pct": 0.0,
+      "use_pct": 35.0
+    },
+    "rocm": "7.0.0",
+    "torch": "2.9.0a0+git7bcbafe",
+    "pytorch_triton_rocm": "3.4.0+rocm7.0.0.gitf9e5bf54",
+    "flash_linear_attention": "0.5.2",
+    "flydsl": "0.2.4",
+    "tracelens": "0.1.0.dev20261009+gc5da90e",
+    "hip_runtime": "7.0.51831-a3e329ad8",
+    "gcn_arch": "gfx950:sramecc+:xnack-"
+  },
+  "graph_steps": 8,
+  "rows": [
+    {
+      "B": 1,
+      "H": 96,
+      "pool_slots": 2,
+      "gates": "kimi",
+      "fla_native_pool_us": 7.46,
+      "candidate": "/root/amd-workspace/kernel-lab/kda-serving/runs/flydsl-decode-v12",
+      "candidate_mode": "native-pool",
+      "candidate_us": 5.43,
+      "speedup_vs_fla": 1.374
+    },
+    {
+      "B": 8,
+      "H": 96,
+      "pool_slots": 16,
+      "gates": "kimi",
+      "fla_native_pool_us": 22.12,
+      "candidate": "/root/amd-workspace/kernel-lab/kda-serving/runs/flydsl-decode-v12",
+      "candidate_mode": "native-pool",
+      "candidate_us": 20.08,
+      "speedup_vs_fla": 1.102
+    },
+    {
+      "B": 32,
+      "H": 96,
+      "pool_slots": 64,
+      "gates": "kimi",
+      "fla_native_pool_us": 68.08,
+      "candidate": "/root/amd-workspace/kernel-lab/kda-serving/runs/flydsl-decode-v12",
+      "candidate_mode": "native-pool",
+      "candidate_us": 73.61,
+      "speedup_vs_fla": 0.925
+    },
+    {
+      "B": 128,
+      "H": 96,
+      "pool_slots": 256,
+      "gates": "kimi",
+      "fla_native_pool_us": 294.1,
+      "candidate": "/root/amd-workspace/kernel-lab/kda-serving/runs/flydsl-decode-v12",
+      "candidate_mode": "native-pool",
+      "candidate_us": 277.44,
+      "speedup_vs_fla": 1.06
+    }
+  ]
+}

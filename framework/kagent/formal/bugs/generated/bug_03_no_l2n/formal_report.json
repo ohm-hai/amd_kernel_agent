@@ -1,0 +1,227 @@
+{
+  "candidate": "/root/amd-workspace/kernel-lab/framework/kagent/formal/bugs/generated/bug_03_no_l2n",
+  "stage": "/root/amd-workspace/kernel-lab/framework/kagent/formal/bugs/generated/bug_03_no_l2n/dump/kda_decode_step_kern_0/09_canonicalize.mlir",
+  "overall": "COUNTEREXAMPLE",
+  "config": {
+    "K": 128,
+    "V": 128,
+    "NV": 4,
+    "THREADS": 256,
+    "WAVEFRONT": 64,
+    "B": 2,
+    "H": 96
+  },
+  "state_dtype": "float32",
+  "selftest_exit": null,
+  "n_chains": 19,
+  "findings": [
+    {
+      "check": "butterfly_coverage",
+      "verdict": "PROVED",
+      "detail": "19 reduction chains form full xor butterflies"
+    },
+    {
+      "check": "equivalence O b=0 h=0 i=0 j=0",
+      "verdict": "COUNTEREXAMPLE",
+      "detail": "O[0]",
+      "writers": 1,
+      "witness": {
+        "model": {
+          "G[67]": 75.0,
+          "S_IN[7808]": 0.0,
+          "Q[24]": 0.0,
+          "G[44]": 85.0,
+          "Q[89]": 0.0,
+          "Q[20]": 0.0,
+          "G[74]": 35.0,
+          "S_IN[7424]": -1.0,
+          "K[63]": 0.0,
+          "G[88]": 54.0,
+          "G[68]": 50.0,
+          "S_IN[4224]": 0.0,
+          "G[70]": 24.0,
+          "K[36]": 0.0,
+          "Q[39]": 0.0,
+          "G[112]": 96.0,
+          "S_IN[1280]": 0.0,
+          "K[66]": 0.0,
+          "Q[69]": 0.0,
+          "Q[51]": 0.0
+        },
+        "spec_over_cand": -1.0
+      }
+    },
+    {
+      "check": "equivalence O b=0 h=0 i=127 j=127",
+      "verdict": "COUNTEREXAMPLE",
+      "detail": "O[127]",
+      "writers": 1,
+      "witness": {
+        "model": {
+          "G[67]": 65.0,
+          "Q[24]": 0.0,
+          "G[44]": 108.0,
+          "Q[89]": 0.0,
+          "Q[20]": 0.0,
+          "G[74]": 12.0,
+          "K[63]": 0.0,
+          "G[88]": 21.0,
+          "G[68]": 9.0,
+          "S_IN[383]": 0.0,
+          "G[70]": 64.0,
+          "S_IN[11775]": 0.0,
+          "S_IN[6783]": 0.0,
+          "S_IN[9727]": 0.0,
+          "Q[39]": 0.0,
+          "G[112]": 57.0,
+          "K[36]": 0.0,
+          "K[66]": 0.0,
+          "Q[69]": 0.0,
+          "Q[51]": 0.0
+        },
+        "spec_over_cand": 0.0
+      }
+    },
+    {
+      "check": "equivalence O b=1 h=3 i=64 j=5",
+      "verdict": "COUNTEREXAMPLE",
+      "detail": "O[12677]",
+      "writers": 1,
+      "witness": {
+        "model": {
+          "K[12743]": 0.0,
+          "Q[12713]": 0.0,
+          "Q[12727]": 0.0,
+          "S_IN[1634053]": 0.0,
+          "G[12725]": 108.0,
+          "S_IN[1624837]": 0.0,
+          "Q[12752]": 0.0,
+          "S_IN[1632133]": 0.0,
+          "K[12691]": 0.0,
+          "K[12757]": 0.0,
+          "S_IN[1624709]": 0.0,
+          "Q[12725]": 0.0,
+          "Q[12743]": 0.0,
+          "G[12720]": 102.0,
+          "Q[12756]": 0.0,
+          "S_IN[1637381]": 0.0,
+          "K[12769]": 0.0,
+          "K[12680]": 0.0,
+          "K[12788]": 0.0,
+          "K[12716]": 0.0
+        },
+        "spec_over_cand": -0.5
+      }
+    },
+    {
+      "check": "equivalence S_OUT b=0 h=0 i=0 j=0",
+      "verdict": "COUNTEREXAMPLE",
+      "detail": "S_OUT[0]",
+      "writers": 1,
+      "witness": {
+        "model": {
+          "G[67]": 68.0,
+          "S_IN[7808]": 0.0,
+          "G[44]": 13.0,
+          "K[63]": 0.0,
+          "G[74]": 47.0,
+          "S_IN[7424]": 0.0,
+          "G[88]": 25.0,
+          "G[68]": 26.0,
+          "S_IN[4224]": 0.0,
+          "G[70]": 78.0,
+          "K[36]": 0.0,
+          "G[112]": 77.0,
+          "K[66]": 0.0,
+          "S_IN[1280]": 0.0,
+          "S_IN[13440]": 0.0,
+          "K[79]": 0.0,
+          "K[70]": 0.0,
+          "G[75]": 61.0,
+          "S_IN[2176]": 0.0,
+          "K[44]": 0.0
+        },
+        "spec_over_cand": -0.0
+      }
+    },
+    {
+      "check": "equivalence S_OUT b=0 h=0 i=127 j=64",
+      "verdict": "COUNTEREXAMPLE",
+      "detail": "S_OUT[16320]",
+      "writers": 1,
+      "witness": {
+        "model": {
+          "G[67]": 80.0,
+          "G[44]": 117.0,
+          "K[63]": 0.0,
+          "G[74]": 81.0,
+          "G[88]": 10.0,
+          "S_IN[2496]": 0.0,
+          "G[68]": 20.0,
+          "G[70]": 71.0,
+          "K[36]": 0.0,
+          "S_IN[3904]": 0.0,
+          "G[112]": 124.0,
+          "K[66]": 0.0,
+          "K[79]": 0.0,
+          "K[70]": 0.0,
+          "G[64]": 43.0,
+          "G[75]": 106.0,
+          "K[44]": 0.0,
+          "G[42]": 44.0,
+          "G[86]": 96.0,
+          "G[104]": 52.0
+        },
+        "spec_over_cand": -0.0
+      }
+    },
+    {
+      "check": "equivalence S_OUT b=1 h=3 i=33 j=7",
+      "verdict": "COUNTEREXAMPLE",
+      "detail": "S_OUT[1626247]",
+      "writers": 1,
+      "witness": {
+        "model": {
+          "K[12743]": 0.0,
+          "G[12725]": 72.0,
+          "S_IN[1637127]": 0.0,
+          "K[12691]": 0.0,
+          "S_IN[1630599]": 0.0,
+          "K[12757]": 0.0,
+          "G[12720]": 27.0,
+          "K[12769]": 0.0,
+          "S_IN[1629575]": 0.0,
+          "K[12680]": 0.0,
+          "K[12788]": 0.0,
+          "K[12716]": 0.0,
+          "S_IN[1638151]": 0.0,
+          "G[12684]": 71.0,
+          "G[12759]": 127.0,
+          "S_IN[1625351]": 0.0,
+          "K[12676]": 0.0,
+          "K[12722]": 0.0,
+          "S_IN[1631239]": 0.0,
+          "G[12719]": 20.0
+        },
+        "spec_over_cand": -0.0
+      }
+    }
+  ],
+  "rounding_points": [
+    "O store truncates to vector<4xbf16> (line 470)",
+    "O store truncates to vector<4xbf16> (line 473)"
+  ],
+  "seconds": 4.7,
+  "note": "exp/rsqrt are uninterpreted; PROVED means same math modulo the abstraction for the addressed elements; precision is the numeric verifier's domain (guidelines 02).",
+  "buffer_order": [
+    "Q",
+    "KB",
+    "GB",
+    "Vvin",
+    "BETA",
+    "S_IN",
+    "S_OUT",
+    "O",
+    "SCALE_T"
+  ]
+}

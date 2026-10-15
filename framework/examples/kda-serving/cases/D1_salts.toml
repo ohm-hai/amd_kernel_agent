@@ -1,0 +1,8 @@
+id = "D1_salts"
+class = "numeric"
+generator = "inputs.make_inputs"
+params = { B = 2, T = 256, H = 8, seeds = [11, 427, 90210], modes = ["synthetic", "kimi"] }
+tolerance_ref = "o_rrmse"
+kills = "any math or indexing bug the sampled inputs reach, across two gate distributions"
+incident = "v1-v7 were validated only with 3-step carry on synthetic gates; the campaign record shows the reference itself needed two fixes (scale before L2N, per-batch initial state) that only the fp64 comparison caught"
+gates = ["D1_synthetic_s11", "D1_kimi_s11", "D1_synthetic_s427", "D1_kimi_s427", "D1_synthetic_s90210", "D1_kimi_s90210"]

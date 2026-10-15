@@ -1,0 +1,8 @@
+id = "D4_drift"
+class = "drift"
+generator = "inputs.make_inputs"
+params = { B = 1, T = 8192, H = 8, seed = 31, gates = "kimi" }
+tolerance_ref = "state_rrmse"
+kills = "reduced-precision state choices and layout errors that only show as accumulating bias"
+incident = "bf16 state passed all early gates and failed long-memory drift at 1.6e-2 state rRMSE; the pre-registered bar selects fp16 (2.0e-3) over bf16"
+gates = ["D4_drift_8192_kimi"]

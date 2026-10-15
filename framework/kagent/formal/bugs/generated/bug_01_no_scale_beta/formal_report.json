@@ -1,0 +1,107 @@
+{
+  "candidate": "/root/amd-workspace/kernel-lab/framework/kagent/formal/bugs/generated/bug_01_no_scale_beta",
+  "stage": "/root/amd-workspace/kernel-lab/framework/kagent/formal/bugs/generated/bug_01_no_scale_beta/dump/kda_decode_step_kern_0/09_canonicalize.mlir",
+  "overall": "COUNTEREXAMPLE",
+  "config": {
+    "K": 128,
+    "V": 128,
+    "NV": 4,
+    "THREADS": 256,
+    "WAVEFRONT": 64,
+    "B": 2,
+    "H": 96
+  },
+  "state_dtype": "float32",
+  "selftest_exit": null,
+  "n_chains": 19,
+  "findings": [
+    {
+      "check": "butterfly_coverage",
+      "verdict": "PROVED",
+      "detail": "19 reduction chains form full xor butterflies"
+    },
+    {
+      "check": "equivalence O b=0 h=0 i=0 j=0",
+      "verdict": "COUNTEREXAMPLE",
+      "detail": "O[0]",
+      "writers": 1,
+      "witness": {
+        "model": {
+          "G[67]": 65.0,
+          "S_IN[7808]": 0.0,
+          "Q[24]": 0.0,
+          "G[44]": 8.0,
+          "Q[89]": 1.0,
+          "Q[20]": 0.0,
+          "G[74]": 78.0,
+          "S_IN[7424]": 0.0,
+          "K[63]": 0.0,
+          "G[88]": 92.0,
+          "S_IN[4224]": 0.0,
+          "G[68]": 66.0,
+          "G[70]": 83.0,
+          "K[36]": 0.0,
+          "Q[39]": 0.0,
+          "G[112]": 116.0,
+          "S_IN[1280]": 0.0,
+          "K[66]": 0.0,
+          "Q[69]": 0.0,
+          "Q[51]": 0.0
+        },
+        "spec_over_cand": 1.5
+      }
+    },
+    {
+      "check": "equivalence O b=0 h=0 i=127 j=127",
+      "verdict": "UNKNOWN",
+      "detail": "O[127]: z3 unknown",
+      "writers": 1,
+      "witness": {}
+    },
+    {
+      "check": "equivalence O b=1 h=3 i=64 j=5",
+      "verdict": "UNKNOWN",
+      "detail": "O[12677]: z3 unknown",
+      "writers": 1,
+      "witness": {}
+    },
+    {
+      "check": "equivalence S_OUT b=0 h=0 i=0 j=0",
+      "verdict": "PROVED",
+      "detail": "S_OUT[0]",
+      "writers": 1,
+      "witness": {}
+    },
+    {
+      "check": "equivalence S_OUT b=0 h=0 i=127 j=64",
+      "verdict": "PROVED",
+      "detail": "S_OUT[16320]",
+      "writers": 1,
+      "witness": {}
+    },
+    {
+      "check": "equivalence S_OUT b=1 h=3 i=33 j=7",
+      "verdict": "PROVED",
+      "detail": "S_OUT[1626247]",
+      "writers": 1,
+      "witness": {}
+    }
+  ],
+  "rounding_points": [
+    "O store truncates to vector<4xbf16> (line 473)",
+    "O store truncates to vector<4xbf16> (line 476)"
+  ],
+  "seconds": 139.3,
+  "note": "exp/rsqrt are uninterpreted; PROVED means same math modulo the abstraction for the addressed elements; precision is the numeric verifier's domain (guidelines 02).",
+  "buffer_order": [
+    "Q",
+    "KB",
+    "GB",
+    "Vvin",
+    "BETA",
+    "S_IN",
+    "S_OUT",
+    "O",
+    "SCALE_T"
+  ]
+}

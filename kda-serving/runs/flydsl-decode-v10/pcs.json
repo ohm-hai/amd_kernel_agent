@@ -1,0 +1,57 @@
+{
+  "candidate": "/root/amd-workspace/kernel-lab/kda-serving/runs/flydsl-decode-v10",
+  "csv": "/tmp/kagent-pcs/flydsl-decode-v10/pcs_pc_sampling_stochastic.csv",
+  "n_samples": 649,
+  "stall_reasons": {
+    "NO_INSTRUCTION_AVAILABLE": 59,
+    "WAITCNT": 316,
+    "OTHER_WAIT": 88,
+    "ARBITER_NOT_WIN": 73,
+    "ALU_DEPENDENCY": 5,
+    "ARBITER_WIN_EX_STALL": 47,
+    "BARRIER_WAIT": 58,
+    "INTERNAL_INSTRUCTION": 3
+  },
+  "top_instructions": {
+    "s_waitcnt lgkmcnt(0)": 77,
+    "s_barrier": 58,
+    "s_waitcnt vmcnt(0)": 39,
+    "global_load_dwordx2 v[24:25], v[2:3], off": 32,
+    "s_mov_b64 s[0:1], -1": 20,
+    "s_cmp_gt_i32 s22, 14": 11,
+    "s_waitcnt vmcnt(1)": 11,
+    "global_store_dwordx2 v[6:7], v[4:5], off": 11
+  },
+  "top_unmapped_pc_offsets": [
+    {
+      "offset_from_base": 380,
+      "samples": 80
+    },
+    {
+      "offset_from_base": 260,
+      "samples": 68
+    },
+    {
+      "offset_from_base": 0,
+      "samples": 3
+    },
+    {
+      "offset_from_base": 312,
+      "samples": 1
+    },
+    {
+      "offset_from_base": 384,
+      "samples": 1
+    },
+    {
+      "offset_from_base": 340,
+      "samples": 1
+    },
+    {
+      "offset_from_base": 232,
+      "samples": 1
+    }
+  ],
+  "seconds": 5.5,
+  "interpretation": "WAITCNT: waiting on memory (LDS/global): overlap more work per wait, wider loads, fewer barriers; OTHER_WAIT: misc wait: inspect top PCs; ARBITER_NOT_WIN: inspect"
+}

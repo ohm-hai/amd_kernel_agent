@@ -1,0 +1,3 @@
+name,total_direct_kernel_time_sum,total_subtree_kernel_time_sum,total_direct_kernel_time_ms,total_subtree_kernel_time_ms,Count,Categories,Percentage (%),Cumulative Percentage (%)
+ChunkKDAFunction,5964.3570556640625,6053.468994140625,5.964357055664062,6.053468994140625,3,['other'],98.52791946959971,98.52791946959971
+aten::fill_,89.1119384765625,89.1119384765625,0.0891119384765625,0.0891119384765625,6,['elementwise'],1.4720805304002915,100.0

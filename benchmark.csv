@@ -1,0 +1,5 @@
+candidate,parent,status,step_time_ms,gemm_tflops_mean,idle_time_pct,source_table,evidence
+baseline-eager,root,active,,77.0,1.39,reports/train_csvs + gpu_timeline.csv,"GEMM 63.6% of kernel time (147 kernels); idle 1.39%; trace=traces/demo_train_trace.json"
+pt-flash-attn,baseline-eager,rejected,, ,,N/A,"Validation crashed: aiter JIT build fails on this box — aiter 0.1.9.post1 expects ck_tile enums (BlockAttentionKVCacheMemoryLayoutEnum) missing from installed composable_kernel. Env finding, not candidate defect."
+torch-compile,pt-flash-attn,rejected,, ,,N/A,"Validation crashed: inductor↔triton skew — pytorch-triton-rocm 3.4.0 KernelMetadata lacks cluster_dims needed by torch 2.9.0a0 inductor. Env finding."
+norm-once,baseline-eager,revised,59.92,77.4,0.57,profile/norm-once/csvs,"VALIDATED (allclose True). Compute 61.22→59.92 ms (-2.1%), idle 1.39%→0.57%, elementwise kernels 243→227 (=2 saved LN x 8 blocks). Below ≥10% promotion target: keep as improved base, iterate further."

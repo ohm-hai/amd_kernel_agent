@@ -1,0 +1,8 @@
+{
+  "name": "bug_03_no_l2n",
+  "expected": {
+    "verdict": "COUNTEREXAMPLE",
+    "on": "O"
+  },
+  "incident": "v1 incident: missing L2 normalization of q/k"
+}

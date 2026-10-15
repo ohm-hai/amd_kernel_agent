@@ -1,0 +1,8 @@
+id = "D3_beta_and_v_paths"
+class = "structural"
+generator = "verify_decode.run_gates_stress"
+params = { B = 2, T = 128, H = 8, seed = 21 }
+tolerance_ref = "o_rrmse"
+kills = "branching/indexing bugs on beta extremes, zero v, and warm-start zero-v paths"
+incident = "the beta=1 edge collapses the decay term and beta=0 removes the state update; both boundaries failed a candidate during the campaign and one verifier tolerance was nearly loosened post-hoc"
+gates = ["D3_beta_extremes", "D3_zero_v_from_warm"]

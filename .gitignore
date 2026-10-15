@@ -1,0 +1,23 @@
+# Large core dumps and crash files
+gpucore.*
+core.*
+*.core
+
+# Python caches and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Profiler and temp outputs
+.rocprofv3/
+*.tmp
+*.log
+/tmp/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/

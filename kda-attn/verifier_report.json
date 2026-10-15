@@ -1,0 +1,105 @@
+{
+  "candidate": "runs/fused-beta",
+  "passed": true,
+  "n_gates": 16,
+  "n_failed": 0,
+  "total_seconds": 32.9,
+  "results": [
+    {
+      "gate": "G2_salt_gauss_s11",
+      "pass": true,
+      "detail": "T=256 dist=gauss gate=legal beta=logits: abs=0.0004492 o_rRMSE=0.004075 | state rRMSE=0.003202",
+      "seconds": 10.26
+    },
+    {
+      "gate": "G2_salt_unif_s11",
+      "pass": true,
+      "detail": "T=256 dist=unif gate=legal beta=logits: abs=0.0003707 o_rRMSE=0.004051 | state rRMSE=0.002957",
+      "seconds": 0.0
+    },
+    {
+      "gate": "G2_salt_laplace_s11",
+      "pass": true,
+      "detail": "T=256 dist=laplace gate=legal beta=logits: abs=0.003082 o_rRMSE=0.003246 | state rRMSE=0.002874",
+      "seconds": 0.0
+    },
+    {
+      "gate": "G4_stress_deep_decay",
+      "pass": true,
+      "detail": "T=128 dist=gauss gate=deep_decay beta=logits: abs=0.0002936 o_rRMSE=0.003849 | state rRMSE=0.002497",
+      "seconds": 0.0
+    },
+    {
+      "gate": "G4_stress_near_unity",
+      "pass": true,
+      "detail": "T=128 dist=gauss gate=near_unity beta=logits: abs=0.001052 o_rRMSE=0.00467 | state rRMSE=0.00407",
+      "seconds": 0.0
+    },
+    {
+      "gate": "G4_stress_beta_extreme",
+      "pass": true,
+      "detail": "T=128 dist=gauss gate=legal beta=logits: abs=0.0004274 o_rRMSE=0.00413 | state rRMSE=0.003062",
+      "seconds": 0.0
+    },
+    {
+      "gate": "G4_boundary_T1",
+      "pass": true,
+      "detail": "T=1 dist=gauss gate=legal beta=logits: abs=0.0001706 o_rRMSE=0.005524 | state rRMSE=0.002321",
+      "seconds": 8.25
+    },
+    {
+      "gate": "G4_boundary_T2",
+      "pass": true,
+      "detail": "T=2 dist=gauss gate=legal beta=logits: abs=0.0001706 o_rRMSE=0.005157 | state rRMSE=0.002943",
+      "seconds": 0.0
+    },
+    {
+      "gate": "G4_boundary_T63",
+      "pass": true,
+      "detail": "T=63 dist=gauss gate=legal beta=logits: abs=0.000586 o_rRMSE=0.004087 | state rRMSE=0.002974",
+      "seconds": 0.0
+    },
+    {
+      "gate": "G4_boundary_T64",
+      "pass": true,
+      "detail": "T=64 dist=gauss gate=legal beta=logits: abs=0.000586 o_rRMSE=0.004081 | state rRMSE=0.003308",
+      "seconds": 0.0
+    },
+    {
+      "gate": "G4_boundary_T65",
+      "pass": true,
+      "detail": "T=65 dist=gauss gate=legal beta=logits: abs=0.000586 o_rRMSE=0.004075 | state rRMSE=0.002823",
+      "seconds": 0.0
+    },
+    {
+      "gate": "G4_boundary_T127",
+      "pass": true,
+      "detail": "T=127 dist=gauss gate=legal beta=logits: abs=0.0007592 o_rRMSE=0.004064 | state rRMSE=0.003326",
+      "seconds": 0.0
+    },
+    {
+      "gate": "G4_boundary_T128",
+      "pass": true,
+      "detail": "T=128 dist=gauss gate=legal beta=logits: abs=0.0007592 o_rRMSE=0.004062 | state rRMSE=0.003187",
+      "seconds": 0.0
+    },
+    {
+      "gate": "G4_boundary_T129",
+      "pass": true,
+      "detail": "T=129 dist=gauss gate=legal beta=logits: abs=0.0007592 o_rRMSE=0.004065 | state rRMSE=0.00302",
+      "seconds": 0.0
+    },
+    {
+      "gate": "G3_varlen_mixed",
+      "pass": true,
+      "detail": "T=8192 dist=gauss gate=legal beta=logits: abs=0.0006357 o_rRMSE=0.004103 | state rRMSE=0.003031",
+      "seconds": 11.2
+    },
+    {
+      "gate": "G3_varlen_uniform",
+      "pass": true,
+      "detail": "T=8192 dist=gauss gate=legal beta=logits: abs=0.0005427 o_rRMSE=0.004078 | state rRMSE=0.003025",
+      "seconds": 0.0
+    }
+  ]
+}

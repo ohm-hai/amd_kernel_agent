@@ -1,0 +1,9 @@
+{
+  "name": "bug_01_no_scale_beta",
+  "expected": {
+    "verdict": "COUNTEREXAMPLE",
+    "on": "O",
+    "hint_factor": "SCALE"
+  },
+  "incident": "v3 incident: missing scale*beta on the sb term"
+}

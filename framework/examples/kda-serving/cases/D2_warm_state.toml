@@ -1,0 +1,8 @@
+id = "D2_warm_state"
+class = "structural"
+generator = "verify_decode.warm_state"
+params = { B = 2, T = 64, H = 8, prefill_tokens = 2048, prefill_seed = 5, decode_seed = 6 }
+tolerance_ref = "o_rrmse"
+kills = "bugs in the initial-state path (layout, indexing, dtype conversion at warm start)"
+incident = "a per-batch initial-state bug in the fp64 reference fed token-0 state to every batch until the verifier rejected FLA itself; serving always enters decode with a warm state from prefill"
+gates = ["D2_warm_state_2048"]

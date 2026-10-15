@@ -1,0 +1,84 @@
+{
+  "candidate": "/root/amd-workspace/kernel-lab/kda-serving/runs/flydsl-decode-v9",
+  "stage": "/tmp/kagent-formal/flydsl-decode-v9/kda_decode_step_v9_0/09_canonicalize.mlir",
+  "overall": "PROVED",
+  "config": {
+    "K": 128,
+    "V": 128,
+    "NV": 4,
+    "THREADS": 256,
+    "WAVEFRONT": 64,
+    "B": 2,
+    "H": 96
+  },
+  "state_dtype": "float32",
+  "selftest_exit": 0,
+  "n_chains": 19,
+  "findings": [
+    {
+      "check": "butterfly_coverage",
+      "verdict": "PROVED",
+      "detail": "19 reduction chains form full xor butterflies"
+    },
+    {
+      "check": "equivalence O b=0 h=0 i=0 j=0",
+      "verdict": "PROVED",
+      "detail": "O[0]",
+      "writers": 1,
+      "witness": {}
+    },
+    {
+      "check": "equivalence O b=0 h=0 i=127 j=127",
+      "verdict": "PROVED",
+      "detail": "O[127]",
+      "writers": 1,
+      "witness": {}
+    },
+    {
+      "check": "equivalence O b=1 h=3 i=64 j=5",
+      "verdict": "PROVED",
+      "detail": "O[12677]",
+      "writers": 1,
+      "witness": {}
+    },
+    {
+      "check": "equivalence S_OUT b=0 h=0 i=0 j=0",
+      "verdict": "PROVED",
+      "detail": "S_OUT[0]",
+      "writers": 1,
+      "witness": {}
+    },
+    {
+      "check": "equivalence S_OUT b=0 h=0 i=127 j=64",
+      "verdict": "PROVED",
+      "detail": "S_OUT[16320]",
+      "writers": 1,
+      "witness": {}
+    },
+    {
+      "check": "equivalence S_OUT b=1 h=3 i=33 j=7",
+      "verdict": "PROVED",
+      "detail": "S_OUT[1626247]",
+      "writers": 1,
+      "witness": {}
+    }
+  ],
+  "rounding_points": [
+    "O store truncates to vector<4xbf16> (line 486)",
+    "O store truncates to vector<4xbf16> (line 489)"
+  ],
+  "seconds": 4.4,
+  "note": "exp/rsqrt are uninterpreted; PROVED means same math modulo the abstraction for the addressed elements; precision is the numeric verifier's domain (guidelines 02). IDENTITY-SLOT ASSUMPTION: the kernel indexes the pool via IDX[b]; the formal check assumes slot == b (the mapping is a launch property; arbitrary idx is validated numerically by the self-test and the verifier).",
+  "buffer_order": [
+    "Q",
+    "KB",
+    "GB",
+    "Vvin",
+    "BETA",
+    "S_IN",
+    "S_OUT",
+    "O",
+    "IDX",
+    "SCALE_T"
+  ]
+}

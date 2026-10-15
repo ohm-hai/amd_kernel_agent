@@ -1,0 +1,4 @@
+{"name": "baseline-fla", "parent": null, "status": "active", "desc": "FLA chunk_kda Triton bf16, use_qk_l2norm_in_kernel=True", "evidence": "verifier ACCEPTED 23/23; bench self-noise band 0.996-1.018x; profile/baseline-fla/ TraceLens report"}
+{"name": "chunk32", "parent": "baseline-fla", "status": "rejected", "desc": "chunk_size=32", "reason": "0.918x on fast workload — slower; verifier ACCEPTED (correct but not faster)"}
+{"name": "fused-beta", "parent": "baseline-fla", "status": "revised", "desc": "use_beta_sigmoid_in_kernel=True (beta logits input contract)", "reason": "0.992x — within noise; no perf gain at this scale. Kept as simplification only."}
+{"name": "NEXT: hand-tuned Triton chunked KDA (gfx950)", "parent": "baseline-fla", "status": "planned", "desc": "write own chunked kernel: fused gate exp + L2N in prologue, tuned BK/BV tiles for mfma on gfx950; progressive synthesis: fixed shape first (blog §05), then varlen"}

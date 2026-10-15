@@ -1,0 +1,9 @@
+{
+  "name": "bug_02_wrong_shuffle",
+  "expected": {
+    "verdict": "COUNTEREXAMPLE",
+    "on": "O",
+    "check": "butterfly_coverage"
+  },
+  "incident": "v4 incident: wrong xor offsets break the reduction cover"
+}

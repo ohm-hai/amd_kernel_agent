@@ -1,0 +1,58 @@
+{
+  "lock_version": 1,
+  "task": "kda-serving",
+  "created": "2026-10-10T08:45:25",
+  "pack_dir": "/root/amd-workspace/kernel-lab/framework/examples/kda-serving",
+  "entrypoints": {
+    "verifier": "frozen/kda-serving/verifier/verify_decode.py",
+    "holdout_runner": "frozen/holdout_runner.py"
+  },
+  "files": {
+    "frozen/holdout_runner.py": "03e1ee61f61e4536b5ee8d02a9640b4d94bd4cdc6999f14f3b634c1711baeafe",
+    "frozen/holdouts.json": "bb7cf41cf56f57b5c0ee8f2b033eb1463060a3b86acb53fe15d8963f8f647c56",
+    "frozen/kda-attn/ref_fp64.py": "4f9cf62597b9b466bb32a7ca0e4622fcb033139fe69b993493b7982e6ba903e7",
+    "frozen/kda-serving/inputs.py": "0665afbf899dff6697efcb5d746f0d79f3c99b653e31b5be4fd1f200457ff164",
+    "frozen/kda-serving/verifier/verify_decode.py": "6a49a61dc7859de127dd038a48fccdcb54f9e8b68969b89284280b7e8bda6372",
+    "frozen/tools/env_stamp.py": "a34394df6e20d4e8d967269f1619957bed33244aec8b52d8ec4ec6c70df1ef2c",
+    "bar:bar.toml": "60f7e04c6a89b590b0210b420b612854458541f94eb84f60c3598fc18e52fa61",
+    "cases:cases/D1_salts.toml": "70c449fab17e6d4786f201f452036068fd3668c813430459118e5a45a54a622a",
+    "cases:cases/D2_warm_state.toml": "5578190ca80fe9ef13558b1bcdb64eef753d74d5064aa00335bef561d185d1f7",
+    "cases:cases/D3_adversarial_ranges.toml": "ed3e908ee094cb7bee7fa7a373378692a654e9c3c2ef625b5b0c552707b4b027",
+    "cases:cases/D3_beta_and_v_paths.toml": "edf8f21f49766fdc608e2a6e0f49efc4305cb587367141feaf7594f816b5d6be",
+    "cases:cases/D4_drift.toml": "d3ae8de50db40e0ebf09c8b9790dd08b9c20f14528343e400e339e2b53958f12",
+    "cases:cases/D5_shapes.toml": "fe08ea6d478a591f424ee271ad74428958f7a807c60ae93271b98988382963f7",
+    "cases:cases/H1_holdout.toml": "745163209a316f58077afce4c1b38e7be3d3cf5196611f47c0edd0ed56324e96"
+  },
+  "thresholds": {
+    "o_rrmse": 0.008,
+    "o_max_abs": 0.05,
+    "state_rrmse": 0.01
+  },
+  "expected_gates": [
+    "D1_kimi_s11",
+    "D1_kimi_s427",
+    "D1_kimi_s90210",
+    "D1_synthetic_s11",
+    "D1_synthetic_s427",
+    "D1_synthetic_s90210",
+    "D2_warm_state_2048",
+    "D3_beta_extremes",
+    "D3_deep_decay",
+    "D3_large_v_x32",
+    "D3_near_unity_gates",
+    "D3_zero_v_from_warm",
+    "D4_drift_8192_kimi",
+    "D5_B2_H96_kimi_k3",
+    "D5_B3_H1"
+  ],
+  "holdout": {
+    "enabled": true,
+    "n_seeds": 4,
+    "seeds": [
+      613965540,
+      693982767,
+      785427682,
+      482519733
+    ]
+  }
+}

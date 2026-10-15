@@ -1,0 +1,8 @@
+{
+  "name": "bug_04_off_by_one",
+  "expected": {
+    "verdict": "COUNTEREXAMPLE",
+    "on": "S_OUT"
+  },
+  "incident": "v4 incident: state row base off by one"
+}

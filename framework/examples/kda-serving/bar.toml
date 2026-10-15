@@ -1,0 +1,14 @@
+# Pre-registered accuracy bar — copied from kda-serving/accuracy-bar.md (2026-10-09).
+# DO NOT EDIT without the user's approval; rebuild the eval lock afterwards.
+pre_registered = "2026-10-09"
+change_policy = "requires user approval + eval-lock rebuild; add a dated note to kda-serving/accuracy-bar.md"
+
+[thresholds.o_rrmse]
+value = 8.0e-3
+applies_to = "output"
+[thresholds.o_max_abs]
+value = 5.0e-2
+applies_to = "output"
+[thresholds.state_rrmse]
+value = 1.0e-2
+applies_to = "state"

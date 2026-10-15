@@ -1,0 +1,8 @@
+id = "D5_shapes"
+class = "structural"
+generator = "inputs.make_inputs"
+params = { shapes = [{ B = 3, T = 32, H = 1 }, { B = 2, T = 16, H = 96 }], seeds = [41, 42] }
+tolerance_ref = "o_rrmse"
+kills = "shape/layout assumptions (odd batch, single head, full 96-head Kimi K3 shape)"
+incident = "the wavefront reduction assumes 128 rows split over 64 lanes; H=1 and B=3 exercise grid edge cases where a wrong assumption still passes on B=2,H=8"
+gates = ["D5_B3_H1", "D5_B2_H96_kimi_k3"]

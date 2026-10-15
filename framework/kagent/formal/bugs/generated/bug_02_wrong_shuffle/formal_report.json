@@ -1,0 +1,71 @@
+{
+  "candidate": "/root/amd-workspace/kernel-lab/framework/kagent/formal/bugs/generated/bug_02_wrong_shuffle",
+  "stage": "/root/amd-workspace/kernel-lab/framework/kagent/formal/bugs/generated/bug_02_wrong_shuffle/dump/kda_decode_step_kern_0/09_canonicalize.mlir",
+  "overall": "COUNTEREXAMPLE",
+  "config": {
+    "K": 128,
+    "V": 128,
+    "NV": 4,
+    "THREADS": 256,
+    "WAVEFRONT": 64,
+    "B": 2,
+    "H": 96
+  },
+  "state_dtype": "float32",
+  "selftest_exit": null,
+  "n_chains": 19,
+  "findings": [
+    {
+      "check": "butterfly_coverage",
+      "verdict": "COUNTEREXAMPLE",
+      "detail": "chain %58: offsets [16, 16, 8, 4, 2, 1] width 64; chain %67: offsets [16, 16, 8, 4, 2, 1] width 64; chain %76: offsets [16, 16, 8, 4, 2, 1] width 64; chain %126: offsets [16, 16, 8, 4, 2, 1] width 64; chain %137: offsets [16, 16, 8, 4, 2, 1] width 64; chain %148: offsets [16, 16, 8, 4, 2, 1] width 64; chain %159: offsets [16, 16, 8, 4, 2, 1] width 64; chain %170: offsets [16, 16, 8, 4, 2, 1] width 64; chain %181: offsets [16, 16, 8, 4, 2, 1] width 64; chain %192: offsets [16, 16, 8, 4, 2, 1] width 64; chain %203: offsets [16, 16, 8, 4, 2, 1] width 64; chain %212: offsets [16, 16, 8, 4, 2, 1] width 64; chain %221: offsets [16, 16, 8, 4, 2, 1] width 64; chain %230: offsets [16, 16, 8, 4, 2, 1] width 64; chain %239: offsets [16, 16, 8, 4, 2, 1] width 64; chain %248: offsets [16, 16, 8, 4, 2, 1] width 64; chain %257: offsets [16, 16, 8, 4, 2, 1] width 64; chain %266: offsets [16, 16, 8, 4, 2, 1] width 64; chain %275: offsets [16, 16, 8, 4, 2, 1] width 64"
+    },
+    {
+      "check": "equivalence O b=0 h=0 i=0 j=0",
+      "verdict": "UNKNOWN",
+      "detail": "unsupported: reduction offsets [16, 16, 8, 4, 2, 1] not a full butterfly for width 64"
+    },
+    {
+      "check": "equivalence O b=0 h=0 i=127 j=127",
+      "verdict": "UNKNOWN",
+      "detail": "unsupported: reduction offsets [16, 16, 8, 4, 2, 1] not a full butterfly for width 64"
+    },
+    {
+      "check": "equivalence O b=1 h=3 i=64 j=5",
+      "verdict": "UNKNOWN",
+      "detail": "unsupported: reduction offsets [16, 16, 8, 4, 2, 1] not a full butterfly for width 64"
+    },
+    {
+      "check": "equivalence S_OUT b=0 h=0 i=0 j=0",
+      "verdict": "UNKNOWN",
+      "detail": "unsupported: reduction offsets [16, 16, 8, 4, 2, 1] not a full butterfly for width 64"
+    },
+    {
+      "check": "equivalence S_OUT b=0 h=0 i=127 j=64",
+      "verdict": "UNKNOWN",
+      "detail": "unsupported: reduction offsets [16, 16, 8, 4, 2, 1] not a full butterfly for width 64"
+    },
+    {
+      "check": "equivalence S_OUT b=1 h=3 i=33 j=7",
+      "verdict": "UNKNOWN",
+      "detail": "unsupported: reduction offsets [16, 16, 8, 4, 2, 1] not a full butterfly for width 64"
+    }
+  ],
+  "rounding_points": [
+    "O store truncates to vector<4xbf16> (line 474)",
+    "O store truncates to vector<4xbf16> (line 477)"
+  ],
+  "seconds": 0.1,
+  "note": "exp/rsqrt are uninterpreted; PROVED means same math modulo the abstraction for the addressed elements; precision is the numeric verifier's domain (guidelines 02).",
+  "buffer_order": [
+    "Q",
+    "KB",
+    "GB",
+    "Vvin",
+    "BETA",
+    "S_IN",
+    "S_OUT",
+    "O",
+    "SCALE_T"
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "candidate": "/root/amd-workspace/kernel-lab/kda-serving/runs/flydsl-decode-v7",
+  "passed": true,
+  "quick": false,
+  "bar": {
+    "o_rrmse": 0.008,
+    "o_max_abs": 0.05,
+    "state_rrmse": 0.01,
+    "source": "accuracy-bar.md (pre-registered 2026-10-09)"
+  },
+  "n_gates": 15,
+  "n_failed": 0,
+  "seconds": 5.7,
+  "env": {
+    "time": "2026-10-10T08:45:59",
+    "host": "ohm-mi355x-25dd40c1-head",
+    "physical_gpu": 4,
+    "gpu_occupancy_at_start": {
+      "vram_pct": 0.0,
+      "use_pct": 26.0
+    },
+    "rocm": "7.0.0",
+    "torch": "2.9.0a0+git7bcbafe",
+    "pytorch_triton_rocm": "3.4.0+rocm7.0.0.gitf9e5bf54",
+    "flash_linear_attention": "0.5.2",
+    "flydsl": "0.2.4",
+    "tracelens": "0.1.0.dev20261009+gc5da90e",
+    "hip_runtime": "7.0.51831-a3e329ad8",
+    "gcn_arch": "gfx950:sramecc+:xnack-"
+  },
+  "results": [
+    {
+      "gate": "D1_synthetic_s11",
+      "B": 2,
+      "T": 256,
+      "H": 8,
+      "seconds": 0.62,
+      "passed": true,
+      "o_rrmse_worst_window": 0.001657979846047373,
+      "o_max_abs": 0.00018481946470087773,
+      "state_rrmse": 8.162297616709346e-08,
+      "input_state_untouched": true
+    },
+    {
+      "gate": "D1_synthetic_s427",
+      "B": 2,
+      "T": 256,
+      "H": 8,
+      "seconds": 0.15,
+      "passed": true,
+      "o_rrmse_worst_window": 0.0016622777041458154,
+      "o_max_abs": 0.00023787165084665496,
+      "state_rrmse": 7.569264881338984e-08,
+      "input_state_untouched": true
+    },
+    {
+      "gate": "D1_synthetic_s90210",
+      "B": 2,
+      "T": 256,
+      "H": 8,
+      "seconds": 0.05,
+      "passed": true,
+      "o_rrmse_worst_window": 0.0016637724285256126,
+      "o_max_abs": 0.00012176693431813906,
+      "state_rrmse": 7.527190008987461e-08,
+      "input_state_untouched": true
+    },
+    {
+      "gate": "D1_kimi_s11",
+      "B": 2,
+      "T": 256,
+      "H": 8,
+      "seconds": 0.05,
+      "passed": true,
+      "o_rrmse_worst_window": 0.0016588991849717425,
+      "o_max_abs": 0.00024108201262855455,
+      "state_rrmse": 1.359995685952798e-07,
+      "input_state_untouched": true
+    },
+    {
+      "gate": "D1_kimi_s427",
+      "B": 2,
+      "T": 256,
+      "H": 8,
+      "seconds": 0.05,
+      "passed": true,
+      "o_rrmse_worst_window": 0.0016608776991213054,
+      "o_max_abs": 0.00022064161932795756,
+      "state_rrmse": 1.3004775318758329e-07,
+      "input_state_untouched": true
+    },
+    {
+      "gate": "D1_kimi_s90210",
+      "B": 2,
+      "T": 256,
+      "H": 8,
+      "seconds": 0.05,
+      "passed": true,
+      "o_rrmse_worst_window": 0.0016604237329072406,
+      "o_max_abs": 0.0001558988305053327,
+      "state_rrmse": 1.3888784281880738e-07,
+      "input_state_untouched": true
+    },
+    {
+      "gate": "D2_warm_state_2048",
+      "B": 2,
+      "T": 64,
+      "H": 8,
+      "seconds": 0.01,
+      "passed": true,
+      "o_rrmse_worst_window": 0.0016498692229890448,
+      "o_max_abs": 0.00022486569780316712,
+      "state_rrmse": 1.3390819091477153e-07,
+      "input_state_untouched": true
+    },
+    {
+      "gate": "D3_deep_decay",
+      "B": 2,
+      "T": 128,
+      "H": 8,
+      "seconds": 0.03,
+      "passed": true,
+      "o_rrmse_worst_window": 0.0016557628485563323,
+      "o_max_abs": 0.00017376052494211258,
+      "state_rrmse": 7.364129662503598e-08,
+      "input_state_untouched": true
+    },
+    {
+      "gate": "D3_near_unity_gates",
+      "B": 2,
+      "T": 256,
+      "H": 8,
+      "seconds": 0.05,
+      "passed": true,
+      "o_rrmse_worst_window": 0.0016630569229656564,
+      "o_max_abs": 0.00048784080975092237,
+      "state_rrmse": 8.886784147895204e-07,
+      "input_state_untouched": true
+    },
+    {
+      "gate": "D3_beta_extremes",
+      "B": 2,
+      "T": 128,
+      "H": 8,
+      "seconds": 0.03,
+      "passed": true,
+      "o_rrmse_worst_window": 0.0016630709209358866,
+      "o_max_abs": 0.00024037752375256904,
+      "state_rrmse": 1.4338538605315336e-07,
+      "input_state_untouched": true
+    },
+    {
+      "gate": "D3_zero_v_from_warm",
+      "B": 2,
+      "T": 64,
+      "H": 8,
+      "seconds": 0.01,
+      "passed": true,
+      "o_rrmse_worst_window": 0.0016567729985208558,
+      "o_max_abs": 0.00010991965605550158,
+      "state_rrmse": 4.1451717555853e-07,
+      "input_state_untouched": true
+    },
+    {
+      "gate": "D3_large_v_x32",
+      "B": 2,
+      "T": 128,
+      "H": 8,
+      "seconds": 0.03,
+      "passed": true,
+      "o_rrmse_worst_window": 0.0016580694377081216,
+      "o_max_abs": 0.005851106697253083,
+      "state_rrmse": 1.3938950612053516e-07,
+      "input_state_untouched": true
+    },
+    {
+      "gate": "D4_drift_8192_kimi",
+      "B": 1,
+      "T": 8192,
+      "H": 8,
+      "seconds": 1.4,
+      "passed": true,
+      "o_rrmse_worst_window": 0.001668565881298236,
+      "o_max_abs": 0.00024324517756192654,
+      "state_rrmse": 1.2767651059905988e-07,
+      "input_state_untouched": true
+    },
+    {
+      "gate": "D5_B3_H1",
+      "B": 3,
+      "T": 32,
+      "H": 1,
+      "seconds": 0.01,
+      "passed": true,
+      "o_rrmse_worst_window": 0.0016782307691401088,
+      "o_max_abs": 0.00012167650900261201,
+      "state_rrmse": 1.409356555289741e-07,
+      "input_state_untouched": true
+    },
+    {
+      "gate": "D5_B2_H96_kimi_k3",
+      "B": 2,
+      "T": 16,
+      "H": 96,
+      "seconds": 0.0,
+      "passed": true,
+      "o_rrmse_worst_window": 0.0016583362502520275,
+      "o_max_abs": 0.00019838128326220283,
+      "state_rrmse": 1.0361916097353804e-07,
+      "input_state_untouched": true
+    }
+  ]
+}

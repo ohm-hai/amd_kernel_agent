@@ -1,0 +1,64 @@
+{
+  "candidate": "/root/amd-workspace/kernel-lab/kda-serving/runs/flydsl-decode-v11",
+  "csv": "/tmp/kagent-pcs/flydsl-decode-v11/pcs_pc_sampling_stochastic.csv",
+  "n_samples": 500,
+  "stall_reasons": {
+    "NO_INSTRUCTION_AVAILABLE": 39,
+    "OTHER_WAIT": 30,
+    "WAITCNT": 293,
+    "ALU_DEPENDENCY": 6,
+    "ARBITER_NOT_WIN": 52,
+    "ARBITER_WIN_EX_STALL": 25,
+    "BARRIER_WAIT": 55
+  },
+  "top_instructions": {
+    "s_barrier": 56,
+    "s_waitcnt vmcnt(0)": 42,
+    "s_waitcnt lgkmcnt(0)": 37,
+    "s_waitcnt vmcnt(0) lgkmcnt(0)": 28,
+    "s_andn2_b64 vcc, exec, s[8:9]": 23,
+    "buffer_load_ushort v4, v3, s[4:7], 0 offen": 17,
+    "global_load_dwordx2 v[24:25], v[2:3], off": 15,
+    "s_waitcnt vmcnt(2)": 7
+  },
+  "top_unmapped_pc_offsets": [
+    {
+      "offset_from_base": 24108,
+      "samples": 85
+    },
+    {
+      "offset_from_base": 23988,
+      "samples": 80
+    },
+    {
+      "offset_from_base": 24076,
+      "samples": 2
+    },
+    {
+      "offset_from_base": 24068,
+      "samples": 1
+    },
+    {
+      "offset_from_base": 24192,
+      "samples": 1
+    },
+    {
+      "offset_from_base": 23776,
+      "samples": 1
+    },
+    {
+      "offset_from_base": 0,
+      "samples": 1
+    },
+    {
+      "offset_from_base": 24092,
+      "samples": 1
+    },
+    {
+      "offset_from_base": 24084,
+      "samples": 1
+    }
+  ],
+  "seconds": 5.6,
+  "interpretation": "WAITCNT: waiting on memory (LDS/global): overlap more work per wait, wider loads, fewer barriers; BARRIER_WAIT: sync imbalance: rebalance workgroups or remove barriers; ARBITER_NOT_WIN: inspect"
+}

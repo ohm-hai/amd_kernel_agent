@@ -1,0 +1,4 @@
+candidate,parent,status,geomean_speedup,verifier,fast_ms,source,evidence
+baseline-fla,root,active,1.000 (self-noise band 0.996-1.018),ACCEPTED 23/23,1.95,bench_report.json + verifier_report.json,"FLA chunk_kda Triton bf16; ~2ms per 8192-token forward (H64 K=V=128) on MI355X; TraceLens: 97.9% compute / 2.1% idle (profile/baseline-fla/)"
+chunk32,baseline-fla,rejected,0.918,ACCEPTED 16/16 (quick),2.17,bench --fast,"chunk_size=32 slower than 64 on gfx950; rejected on evidence"
+fused-beta,baseline-fla,revised,0.992,ACCEPTED 16/16 (quick),2.00,bench --fast,"in-kernel beta sigmoid: no measurable gain at this scale (sigmoid cost << chunked GEMMs); within ±2% noise band; flag kept as semantically-equivalent simplification, dropped from perf track"
